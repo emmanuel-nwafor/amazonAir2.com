@@ -1,0 +1,589 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+  background-color: black;
+}
+.nav h2 {
+  color: white;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.nav #cart {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.purity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140vh;
+}
+/* .purity img {
+    height: 500px;
+    width: 520px;
+  
+  } */
+.purity h1 {
+  color: rgb(255, 251, 251);
+  font-size: 20px;
+}
+.purity p {
+  color: grey;
+  padding: 20px 50px;
+  text-align: center;
+}
+.purity .images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+}
+.purity .images img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  border: 2px solid rgb(255, 255, 255);
+}
+.purity #image2 {
+  transform: translateX(-20px);
+}
+.purity #image3 {
+  transform: translateX(-40px);
+}
+.purity #image4 {
+  transform: translateX(-60px);
+}
+.quality {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+}
+#main {
+  display: none;
+}
+
+/* @media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+} */
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+  .sidenav {
+    height: 30%;
+    width: 0;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  .sidenav a {
+    padding: 6px 6px 6px 6px;
+    margin: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    color: ghostwhite;
+    display: block;
+    transition: 0.2s;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    background-color: #202022;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+    display: flex;
+    height: 70px;
+    z-index: 1;
+  }
+  .container span {
+    color: #fff;
+    height: 30px;
+    width: 5px;
+    margin-bottom: 20px;
+  }
+  .container img {
+    height: 40px;
+    width: 50px;
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateX(-40px);
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+  .quality {
+    display: flex;
+    flex-direction: column;
+    height: 166vh;
+  }
+  .quality .purifier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .quality .purifier #div1 {
+    margin: 30px;
+    height: 40vh;
+    width: 80vw;
+    background-image: url("purity9.jpg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  .quality .purifier #div1:hover {
+    background-image: url("purity5.jpeg");
+    border: 0;
+  }
+  .quality .purifier #div2 {
+    margin: 30px;
+    height: 40vh;
+    width: 80vw;
+    background-image: url("purity3.jpeg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  .quality .purifier #div2:hover {
+    background-image: url("purity10.jpg");
+    border: 0;
+  }
+  .quality .purifier #div3 {
+    margin: 30px;
+    height: 40vh;
+    width: 80vw;
+    background-image: url("purity4.jpeg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  .quality .purifier #div3:hover {
+    background-image: url("purity2.jpeg");
+    border: 0;
+  }
+  .purity {
+    height: 100vh;
+  }
+  .purity h1 {
+    font-size: 16px;
+  }
+  .purity #woofer {
+    height: 380px;
+    width: 300px;
+  }
+  .off {
+    height: 30vh;
+  }
+  .off #offimg {
+    height: 250px;
+    width: 150px;
+    margin: 20px;
+  }
+  .off h1 {
+    font-size: 25px;
+    margin: 30px;
+  }
+  .about {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 60px;
+  }
+  .about #img {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 20px;
+    margin: 40px;
+  }
+  #main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin: 20px; */
+  }
+  .openbtn {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  #search {
+    width: 400px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.171);
+    outline: none;
+    border: 0;
+    border-radius: 100px;
+    margin: 30px;
+    color: white;
+  }
+  #formButton {
+    background-color: rgba(128, 128, 128, 0.767);
+    border: 0;
+    border-radius: 100px;
+    margin: 30px;
+    color: white;
+    width: 80px;
+    height: 50px;
+  }
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar input {
+  width: 185px;
+  height: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.377);
+  outline: none;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar a button {
+  height: 30px;
+  width: 60px;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+.quality h1 {
+  font-size: 20px;
+}
+
+.quality .purifier {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  margin: 100px;
+}
+.quality .purifier .div1 {
+  margin: 30px;
+  height: 55vh;
+  width: 26vw;
+  background-image: url("purity9.jpg");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: 0.4s;
+  /* border: 1px solid white; */
+}
+.quality .purifier .div1:hover {
+  background-image: url("purity5.jpeg");
+  border: 0;
+}
+.quality .purifier .div2 {
+  margin: 30px;
+  height: 55vh;
+  width: 26vw;
+  background-image: url("purity3.jpeg");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.quality .purifier .div2:hover {
+  background-image: url("purity10.jpg");
+  border: 1px;
+}
+.quality .purifier .div3 {
+  margin: 30px;
+  height: 55vh;
+  width: 26vw;
+  background-image: url("purity4.jpeg");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.quality .purifier .div3:hover {
+  background-image: url("purity2.jpeg");
+}
+.quality .purifier .div1 h2,
+p {
+  margin: 30px;
+}
+.quality .purifier .div2 h2 {
+  margin: 30px;
+}
+.quality .purifier .div3 h2 {
+  margin: 30px;
+}
+.quality .purifier .div1 .bottom,
+.quality .purifier .div2 .bottom,
+.quality .purifier .div3 .bottom {
+  margin: 30px;
+  display: flex;
+  transform: translateY(120px);
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+.quality .purifier .div1 .bottom button,
+.quality .purifier .div2 .bottom button,
+.quality .purifier .div3 .bottom button {
+  background-color: rgba(128, 128, 128, 0.377);
+  height: 40px;
+  width: 100px;
+  border: 0;
+  color: rgb(218, 218, 218);
+  border-radius: 5px;
+}
+.quality .purifier .div1 .bottom button:hover,
+.quality .purifier .div2 .bottom button:hover,
+.quality .purifier .div3 .bottom button:hover {
+  border: 1px solid white;
+}
+.off {
+  height: 60vh;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #2f2f2f;
+  align-items: center;
+}
+.off div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 10px;
+}
+.off h1 {
+  margin: 30px;
+}
+.off b {
+  color: grey;
+}
+.off img {
+  height: 330px;
+  width: 200px;
+}
+.off div button {
+  background-color: rgba(128, 128, 128, 0.377);
+  height: 40px;
+  width: 90px;
+  border: 0;
+  color: rgb(218, 218, 218);
+  border-radius: 5px;
+  margin: 30px;
+  transform: translateY(-40px);
+  transition: 0.2s;
+}
+.off div button:hover {
+  border: 1px solid white;
+}
+
+.about {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 60px;
+}
+.about img {
+  height: 40vh;
+  width: 80vh;
+  border-radius: 20px;
+  margin: 40px;
+}
+.about div p {
+  margin: 40px;
+}
+.about div button {
+  background-color: rgba(128, 128, 128, 0.377);
+  height: 40px;
+  width: 150px;
+  border: 0;
+  color: rgb(218, 218, 218);
+  border-radius: 5px;
+  transform: translateY(-20px);
+  transition: 0.2s;
+}
+.sidenav {
+  display: none;
+}
+.sidenav span {
+  display: none;
+}
+
+/* SEARCH STYLING */
+
+#search {
+  width: 400px;
+  height: 50px;
+  background-color: rgba(128, 128, 128, 0.171);
+  outline: none;
+  border: 0;
+  border-radius: 100px;
+  margin: 30px;
+  color: white;
+}
+#formButton {
+  background-color: rgba(128, 128, 128, 0.767);
+  border: 0;
+  border-radius: 100px;
+  margin: 20px;
+  color: white;
+  width: 80px;
+  height: 50px;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrivals {
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.arrivals h2 {
+  text-align: center;
+  margin: 20px;
+}
+@media screen and (min-width: 767px) {
+  .arrivals {
+    display: none;
+  }
+}
+.move {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50vh;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+.move img {
+  height: 350px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+footer {
+  height: 60vh;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #2f2f2f;
+}
